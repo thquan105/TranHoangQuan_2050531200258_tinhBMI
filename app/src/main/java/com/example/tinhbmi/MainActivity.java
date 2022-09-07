@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Button btntinh = (Button) findViewById(R.id.btntinh);
         EditText cnang = (EditText) findViewById(R.id.cannangtext);
         EditText ccao = (EditText) findViewById(R.id.chieucaotext);
@@ -23,26 +24,26 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 cannang = Float.parseFloat(cnang.getText().toString());
-                chieucao = Float.parseFloat(ccao.getText().toString());
+                chieucao = Float.parseFloat(ccao.getText().toString())/100;
                 bmi = 0;
                 if (view.getId() == R.id.btntinh) {
                     bmi = cannang / (chieucao * chieucao);
                     if (bmi < 16)
-                        kq.setText("BMI = " + bmi + ": Gầy độ III");
+                        kq.setText("BMI = " + bmi + "\n-> Gầy độ III");
                     else if (bmi < 17)
-                        kq.setText("BMI = " + bmi + ": Gầy độ II");
+                        kq.setText("BMI = " + bmi + "\n-> Gầy độ II");
                     else if (bmi < 18.5)
-                        kq.setText("BMI = " + bmi + ": Gầy độ I");
+                        kq.setText("BMI = " + bmi + "\n-> Gầy độ I");
                     else if (bmi < 25)
-                        kq.setText("BMI = " + bmi + ": Bình thường");
+                        kq.setText("BMI = " + bmi + "\n-> Bình thường");
                     else if (bmi < 30)
-                        kq.setText("BMI = " + bmi + ": Thừa cân");
+                        kq.setText("BMI = " + bmi + "\n-> Thừa cân");
                     else if (bmi < 35)
-                        kq.setText("BMI = " + bmi + ": Béo phì độ I");
+                        kq.setText("BMI = " + bmi + "\n-> Béo phì độ I");
                     else if (bmi < 40)
-                        kq.setText("BMI = " + bmi + ": Béo phì II");
+                        kq.setText("BMI = " + bmi + "\n-> Béo phì II");
                     else
-                        kq.setText("BMI = " + bmi + ": Béo phì III");
+                        kq.setText("BMI = " + bmi + "\n-> Béo phì III");
                 }
             }
         });
