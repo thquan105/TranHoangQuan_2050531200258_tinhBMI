@@ -46,7 +46,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/cannangtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
@@ -54,29 +54,29 @@
         android:layout_marginEnd="140dp"
         android:ems="10"
         android:hint="Nhập Cân Nặng (Kg)"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/chieucaotext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
         android:layout_marginTop="72dp"
         android:layout_marginEnd="140dp"
         android:ems="10"
-        android:hint="Nhập Cân Nặng (Kg)"
-        android:inputType="textPersonName"
+        android:hint="Nhập Chiều Cao (m)"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/cannangtext"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btntinh"
         android:layout_width="193dp"
         android:layout_height="60dp"
         android:layout_marginStart="138dp"
@@ -86,23 +86,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/chieucaotext" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="85dp"
-        android:layout_marginTop="73dp"
         android:layout_marginEnd="268dp"
-        android:layout_marginBottom="196dp"
-        android:text="Kết Quả:"
+        android:layout_marginBottom="96dp"
+        android:text="..............."
         android:textColor="#FF0000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="278dp"
+        android:layout_marginBottom="8dp"
+        android:text="Kết Quả:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
